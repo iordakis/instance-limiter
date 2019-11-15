@@ -8,4 +8,4 @@ It will also terminate the python code execution if the target program file name
 
 An example usage:
 
-Before using a compiler to make your python script executable, you can add the code in your main file to prevent running multiple instances of your executable.
+Before using a compiler to make your python script executable, you can add the code in your main file to prevent running multiple instances of your executable afterward.
