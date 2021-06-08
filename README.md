@@ -1,11 +1,19 @@
 A script by https://github.com/iordakis/
 
-A solution to prevent running more than one instance of a program.
-The script can be implemented at the start of your existing python code, or used as an external trigger with your adaptations.
+DESCRIPTION:
 
-It will terminate the python code execution if the target program is opened a second time in the system.
-It will also terminate the python code execution if the target program file name was modified. (this prevents avoiding the process counting which will result in bypassing the filter)
+A solution to prevent running more than one instance of a program inside a Windows OS.
 
-An example usage:
+If more than one instance of the same process is detected, the script will force-close the target process.
 
-Before using a compiler to make your python script executable, you can add the code in your main file to prevent running multiple instances of your executable afterward.
+The script will also terminate the execution of the target process if the program filename was modified. (This prevents bypassing the process count filter)
+
+USE CASES:
+
+Providing or licensing an app which is having some form of output limitations in a given amount of time.
+Thus, the instance limiter prevents the user to generate a large output volume in a relatively shorter time-span by running multiple instances of your app.
+
+IMPLEMENTATION:
+
+For executables: Before compiling your Python code to an executable, add the instance limiter code anywhere in your main code file.
+The code can also be used for non-Python-based apps, as an external control trigger with your own adaptations hooks.
